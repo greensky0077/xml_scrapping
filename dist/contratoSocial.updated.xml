@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contratoSocial xmlns="http://economia.gob.mx/public/xsd/dgnm/sas/v1/contratoSocial" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://economia.gob.mx/public/xsd/dgnm/sas/v1/contratoSocial">
+   <informacion>
+      <tipoDocumento>CREACION SAS</tipoDocumento>
+      <version>1</version>
+   </informacion>
+   <personaMoral>
+      <claveTramite>SAS-1.2-202303-ROPE6505115EA585748CS</claveTramite>
+      <folioTramite>585748</folioTramite>
+      <nombreMoral>TISKA CONSTRUCCIONES Y SERVICIOS</nombreMoral>
+      <nombreRepresentanteLegal>EDUARDO ROSALES PAZ</nombreRepresentanteLegal>
+      <fechaConstitucion>2023-03-10</fechaConstitucion>
+      <valorAccion>5</valorAccion>
+      <capitalSocial>100000</capitalSocial>
+      <duracion>INDEFINIDA</duracion>
+      <claveLada>55</claveLada>
+      <telefono>29264300</telefono>
+      <correoElectronico>tiskamx@outlook.com</correoElectronico>
+      <actividadPrincipal>Alquiler de automóviles sin chofer</actividadPrincipal>
+      <domicilio>
+         <cp>3650</cp>
+         <calle>MONTE ALBAN</calle>
+         <numeroExterior>604</numeroExterior>
+         <numeroInterior>null</numeroInterior>
+         <colonia>LETRAN VALLE</colonia>
+         <entidadFederativa>CIUDAD DE MEXICO</entidadFederativa>
+         <pais>MEX</pais>
+         <localidad>BENITO JUAREZ</localidad>
+         <latitud>19.320166</latitud>
+         <longitud>-99.221583</longitud>
+      </domicilio>
+   </personaMoral>
+   <accionistas>
+      <accionista>
+         <rfc>ROPE6505115EA</rfc>
+         <curp>ROPE650511HDFSZD07</curp>
+         <nombre>EDUARDO</nombre>
+         <apellidoPaterno>ROSALES</apellidoPaterno>
+         <apellidoMaterno>PAZ</apellidoMaterno>
+         <nacionalidad>MEXICANO</nacionalidad>
+         <numeroAccionesFijas>10000</numeroAccionesFijas>
+         <numeroAccionesVariables>10000</numeroAccionesVariables>
+         <esRepresentanteLegal>SI</esRepresentanteLegal>
+         <entidadFederativa>CIUDAD DE MEXICO</entidadFederativa>
+         <cp>11440</cp>
+      </accionista>
+   </accionistas>
+   <documentos>
+      <documento>
+         <descripcion>PDF original</descripcion>
+         <uri>https://edocumentos.economia.gob.mx/dgnm/protected/sas/1.2/202303/SAS-1.2-202303-585748.pdf</uri>
+         <hashPdf-sha256>cee8bcd00e976e1ca4f703fe47b4ca7bfe4357321819f1e25e9c65caf7baa862</hashPdf-sha256>
+      </documento>
+      <documento>
+         <descripcion>PDF con firmas</descripcion>
+         <uri>https://edocumentos.economia.gob.mx/dgnm/protected/sas/1.2/202303/SAS-1.2-202303-585748-SIGNED.pdf</uri>
+      </documento>
+   </documentos>
+</contratoSocial>

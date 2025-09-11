@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contratoSocial xmlns="http://economia.gob.mx/public/xsd/dgnm/sas/v1/contratoSocial" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://economia.gob.mx/public/xsd/dgnm/sas/v1/contratoSocial">
+   <informacion>
+      <tipoDocumento>CREACION SAS</tipoDocumento>
+      <version>1</version>
+   </informacion>
+   <personaMoral>
+      <claveTramite>SAS-1.2-202303-MEGJ640107QSA585748CS</claveTramite>
+      <folioTramite>585748</folioTramite>
+      <nombreMoral>TISKA CONSTRUCCIONES Y SERVICIOS</nombreMoral>
+      <nombreRepresentanteLegal>JORGE MEDINA GONZALEZ</nombreRepresentanteLegal>
+      <fechaConstitucion>2023-03-10</fechaConstitucion>
+      <valorAccion>5</valorAccion>
+      <capitalSocial>100000.0</capitalSocial>
+      <duracion>INDEFINIDA</duracion>
+      <claveLada>55</claveLada>
+      <telefono>29264300</telefono>
+      <correoElectronico>facturas.jmg@outlook.com</correoElectronico>
+      <actividadPrincipal>Alquiler de automóviles sin chofer</actividadPrincipal>
+      <domicilio>
+         <cp>03650</cp>
+         <calle>MONTE ALBAN</calle>
+         <numeroExterior>604</numeroExterior>
+         <numeroInterior>null</numeroInterior>
+         <colonia>LETRAN VALLE</colonia>
+         <entidadFederativa>CIUDAD DE MEXICO</entidadFederativa>
+         <pais>MEX</pais>
+         <localidad>BENITO JUAREZ</localidad>
+         <latitud>19.320166</latitud>
+         <longitud>-99.221583</longitud>
+      </domicilio>
+   </personaMoral>
+   <accionistas>
+      <accionista><rfc>MEGJ640107QSA</rfc><curp>MEGJ640107HDFDNR07</curp><nombre>JORGE</nombre><apellidoPaterno>MEDINA</apellidoPaterno><apellidoMaterno>GONZALEZ</apellidoMaterno><nacionalidad>MEXICANO</nacionalidad><numeroAccionesFijas>10000</numeroAccionesFijas><numeroAccionesVariables>10000</numeroAccionesVariables><esRepresentanteLegal>SI</esRepresentanteLegal><entidadFederativa>CIUDAD DE MEXICO</entidadFederativa><cp>11440</cp></accionista>
+   </accionistas>
+   <documentos>
+      <documento>
+         <descripcion>PDF original</descripcion>
+         <uri>https://edocumentos.economia.gob.mx/dgnm/protected/sas/1.2/202303/SAS-1.2-202303-585748.pdf</uri>
+         <hashPdf-sha256>cee8bcd00e976e1ca4f703fe47b4ca7bfe4357321819f1e25e9c65caf7baa862</hashPdf-sha256>
+      </documento>
+      <documento>
+         <descripcion>PDF con firmas</descripcion>
+         <uri>https://edocumentos.economia.gob.mx/dgnm/protected/sas/1.2/202303/SAS-1.2-202303-585748-SIGNED.pdf</uri>
+      </documento>
+   </documentos>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+    <SignedInfo>
+        <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+        <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+        <Reference URI="https://www.tuempresa.gob.mx/sas/archivodigital/ent29/1/SAS-1.2-202303-MEGJ640107QSA585748CS-SIGNED.xml">
+            <Transforms>
+                <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+            </Transforms>
+            <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+                <DigestValue>246e10de00ae8d477a467cf20bada7d049f27db87069cc1d826fbed3b88b5a42</DigestValue>
+        </Reference>
+    </SignedInfo>
+    <SignatureValue>jlgjX1XBNP80uuhLZP8rb7RZLzuD83pkET5DJyqPySS9FXMWb8+2+4xxPjqd0F/hnE5ZmB7y
+b5XOTsM8JjwiSnsD42UWs2C3g4Qv43INNO/MqAx8d7hV/yvNbq7AfO4yWKM7l1UydBkiIqfL
+CuuV/FM/k5qzqqJ0DEZU+tbuV/KBFE2EqHANCI887c6tTm53i6O0VvNMiOLLDe1Lw/Ul7fiB
+a+lRBD63PjZpCS6xU6aXv7CdQfUpOX2tS+oZGhuouuc9C8B2UNfv62TmXKsInX/xT6rVJ4vL
+uTOh57Mp81gd9M+phjKaorKUHoyF4U0C30O3K0woUAXWFTZCIABIOA==</SignatureValue>
+    <KeyInfo>
+        <KeyValue>
+            <RSAKeyValue>
+                <Modulus>AJktd2IHiQ3hPBr0lyFxmGwHaUcCe4xcCvSRiLw4CvrB8Kjb3BB3VqW/Coec39iqkk/4768KdToPKL28k5AJZgtPWc4Nr0kHvF/X+PQ16Ta+OWLYkYLZZ2w2M2Xrqj9iZspe4W3Nuv2HwMacOrkMusxoT6AlSPMYwu7a0Zqj/jFLIWz+bhLIdubK8vR7nXgx2jpH0hCFyBKzCq4LGLUjdyrORklqVvNuQD1+2MKWVdREjmhZOmDlWscIjqthzgoyku9FJjPIT/YD/XCIoKcgOcMl/RY5T/SHWIZaEvnImwWRKdPGB+EFP1F5bq/EvlDqqd0/SwKCp86JVfgk1aoCiXc=</Modulus>
+                <Exponent>AQAB</Exponent>
+            </RSAKeyValue>
+        </KeyValue>
+        <X509Data>
+            <X509SubjectName>OID.2.5.4.5=MEGJ640107HDFDNR07, OID.2.5.4.45=MEGJ640107QSA, OID.1.2.840.113549.1.9.1=facturas.jmg@outlook.com, C=MX, O=JORGE MEDINA GONZALEZ, OID.2.5.4.41=JORGE MEDINA GONZALEZ, CN=JORGE MEDINA GONZALEZ</X509SubjectName>
+            <X509IssuerSerial>
+                <X509IssuerName>OID.1.2.840.113549.1.9.2=responsable: ADMINISTRACION CENTRAL DE SERVICIOS TRIBUTARIOS AL CONTRIBUYENTE, OID.2.5.4.45=SAT970701NN3, L=CUAUHTEMOC, ST=CIUDAD DE MEXICO, C=MX, OID.2.5.4.17=06300, STREET="AV. HIDALGO 77, COL. GUERRERO", OID.1.2.840.113549.1.9.1=contacto.tecnico@sat.gob.mx, OU=SAT-IES Authority, O=SERVICIO DE ADMINISTRACION TRIBUTARIA, CN=AUTORIDAD CERTIFICADORA</X509IssuerName>
+                <X509SerialNumber>3030303031303030303030353137373936303635</X509SerialNumber>
+                <NotBefore>2023-02-10 13:38:05.0</NotBefore>
+                <NotAfter>2027-02-10 13:38:45.0</NotAfter>
+            </X509IssuerSerial>
+            <X509Certificate>MIIGLzCCBBegAwIBAgIUMDAwMDEwMDAwMDA1MTc3OTYwNjUwDQYJKoZIhvcNAQELBQAwggGEMSAwHgYDVQQDDBdBVVRPUklEQUQgQ0VSVElGSUNBRE9SQTEuMCwGA1UECgwlU0VSVklDSU8gREUgQURNSU5JU1RSQUNJT04gVFJJQlVUQVJJQTEaMBgGA1UECwwRU0FULUlFUyBBdXRob3JpdHkxKjAoBgkqhkiG9w0BCQEWG2NvbnRhY3RvLnRlY25pY29Ac2F0LmdvYi5teDEmMCQGA1UECQwdQVYuIEhJREFMR08gNzcsIENPTC4gR1VFUlJFUk8xDjAMBgNVBBEMBTA2MzAwMQswCQYDVQQGEwJNWDEZMBcGA1UECAwQQ0lVREFEIERFIE1FWElDTzETMBEGA1UEBwwKQ1VBVUhURU1PQzEVMBMGA1UELRMMU0FUOTcwNzAxTk4zMVwwWgYJKoZIhvcNAQkCE01yZXNwb25zYWJsZTogQURNSU5JU1RSQUNJT04gQ0VOVFJBTCBERSBTRVJWSUNJT1MgVFJJQlVUQVJJT1MgQUwgQ09OVFJJQlVZRU5URTAeFw0yMzAyMTAxOTM4MDVaFw0yNzAyMTAxOTM4NDVaMIHLMR4wHAYDVQQDExVKT1JHRSBNRURJTkEgR09OWkFMRVoxHjAcBgNVBCkTFUpPUkdFIE1FRElOQSBHT05aQUxFWjEeMBwGA1UEChMVSk9SR0UgTUVESU5BIEdPTlpBTEVaMQswCQYDVQQGEwJNWDEnMCUGCSqGSIb3DQEJARYYZmFjdHVyYXMuam1nQG91dGxvb2suY29tMRYwFAYDVQQtEw1NRUdKNjQwMTA3UVNBMRswGQYDVQQFExJNRUdKNjQwMTA3SERGRE5SMDcwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCZLXdiB4kN4Twa9JchcZhsB2lHAnuMXAr0kYi8OAr6wfCo29wQd1alvwqHnN/YqpJP+O+vCnU6Dyi9vJOQCWYLT1nODa9JB7xf1/j0Nek2vjli2JGC2WdsNjNl66o/YmbKXuFtzbr9h8DGnDq5DLrMaE+gJUjzGMLu2tGao/4xSyFs/m4SyHbmyvL0e514Mdo6R9IQhcgSswquCxi1I3cqzkZJalbzbkA9ftjCllXURI5oWTpg5VrHCI6rYc4KMpLvRSYzyE/2A/1wiKCnIDnDJf0WOU/0h1iGWhL5yJsFkSnTxgfhBT9ReW6vxL5Q6qndP0sCgqfOiVX4JNWqAol3AgMBAAGjTzBNMAwGA1UdEwEB/wQCMAAwCwYDVR0PBAQDAgPYMBEGCWCGSAGG+EIBAQQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDBAYIKwYBBQUHAwIwDQYJKoZIhvcNAQELBQADggIBAJEhyAvGTOsg75F/Dd2k76rjjrlbmj9wWiu+nl4ESzRnPOSZg00uRw8bN5qQWnAMfF3dC1g3uGaKVtJlbpb9jvQa943fusBBBl1C+kQ15Ru6wu+SqzQuU0x8LjJprg97O9ZlpyPwBAGCO7BaGTpODQDSrBvjRtimuiPGSUDeWowJ6Nc7rOHTLeeO3hyonDGVygJQyaZZzypatO1F5L4PUAdTQGTuI8SyYBmKlfXhWG0QVo10QZWfHFVS3sc4Nipz3SjXx506rvqaZWeTMGBlPfeDD8Bv7lb5WEfFPHcQXb0j6iZ04q/iLA6pfYO1g25ZcuEAOJWQ5ofvYeUrtP82bS6muFZTGLH3rtjL5UN+kvkGaah9JmEz5l61nJidtFI9yay8lN2Nrh+8JeTGsQOuaU5d4HH6GixAmFLHub53cQisrHsmzEwGNCdIY1T2Co/Xe7a9uYAz5MzSbIJy6KEjscYFIMwTkA19CTJI4NhnlR6f0AH5+xW0TpjrkOU/VLycIYEKKKKHV9ryO33zRPJGle3vodW85RzQxmYy3B0rczUX3OMEDC/M1WQY67T7z/DQoerDYfi3NReWV4TdiZ1qR43wkhHRLaIgDzwvkCUV/JVGAu9TyWxL/tMU34/fZdxNb6ah5HH1PoexefqyV69BWh3vmQjKh3WTdgo/fP8P0MQN</X509Certificate>
+            </X509Data>
+    </KeyInfo>
+    <Object Id="gobmxEsquemaTramitacion">
+        <SignatureProperties xmlns:dsp="http://www.w3.org/2009/xmldsig-properties">
+            <SignatureProperty Id="identifier" Target="#DistributorASignature">
+                <dsp:Identifier>SAS-1.2-202303-MEGJ640107QSA585748CS</dsp:Identifier>
+            </SignatureProperty>
+            <SignatureProperty Id="created" Target="#DistributorASignature">
+                <dsp:Created>2023-03-10 18:37:51.011</dsp:Created>
+            </SignatureProperty>
+            <SignatureProperty Id="curpOrfcFirmante" Target="#DistributorASignature">
+                <dsp:curpOrfcFirmante>MEGJ640107HDFDNR07</dsp:curpOrfcFirmante>
+            </SignatureProperty>
+            <SignatureProperty Id="nombreFirmante" Target="#DistributorASignature">
+                <dsp:nombreFirmante>JORGE MEDINA GONZALEZ</dsp:nombreFirmante>
+            </SignatureProperty>
+        </SignatureProperties>
+    </Object>
+</Signature>	<Signature>
+		<firmaSE>e+VCqzpHa8em82DZkf0QRwQ5d90JZBBBzvWInUPj8yko05nEiN3JtNlD/Bugnqf08RbPoLHvj+32
+MN3KanQgYtkD76ZvxW8eJrQ4pP6xaRmGq/SuK+a4Sd6lrYMBQExlcPBTUdhlLkFA3nTCwz3T/SpR
+RbxbsUCvotyYMGoZqs+EbcHb9q8N/J3xhTQ7lLYS6aWyA/HZ+S/81M/i8ri5MVk6IMH7pfEMU92K
+g1oXmASOtu6jAL0Gxl9SL46FLYMiwS0+1GV2VM9142LzIeUKIxR7e8pvq2wtTiV4A/urorTF+pvA
+QCtuWqGUwww3oyXRVj+1aDNMT/5ddw1GdgS68Q==</firmaSE>
+		<selloSE>MIIHDjCCBPagAwIBAgICANkwDQYJKoZIhvcNAQELBQAwggEwMRcwFQYDVQQHEw5BbHZhcm8gT2Jy
+ZWdvbjEZMBcGA1UECBMQQ2l1ZGFkIGRlIE1leGljbzELMAkGA1UEBhMCTVgxDjAMBgNVBBETBTAx
+MDMwMR0wGwYDVQQJExRJbnN1cmdlbnRlcyBTdXIgMTk0MDFAMD4GA1UEAxM3QS4gQy4gZGUgbGEg
+RGlyZWNjaW9uIEdlbmVyYWwgZGUgTm9ybWF0aXZpZGFkIE1lcmNhbnRpbDE0MDIGA1UECxMrRGly
+ZWNjaW9uIEdlbmVyYWwgZGUgTm9ybWF0aXZpZGFkIE1lcmNhbnRpbDEfMB0GA1UEChMWU2VjcmV0
+YXJpYSBkZSBFY29ub21pYTElMCMGCSqGSIb3DQEJARYWYWNkZ25tQGVjb25vbWlhLmdvYi5teDAe
+Fw0xOTA3MDUwMDAwMDBaFw0yMzA3MDUwMDAwMDBaMIIBxzEhMB8GA1UEFBMYKDU1KTUyMjkgNjEw
+MCBFeHQuIDMzNTI5MRswGQYDVQQFExJDQUhFNjcxMTA3SERGU1JSMDMxFzAVBgNVBC0DDgBDQUhF
+NjcxMTA3U1Y4MRcwFQYDVQQHEw5BbHZhcm8gT2JyZWdvbjEZMBcGA1UECBMQQ2l1ZGFkIGRlIE1l
+eGljbzELMAkGA1UEBhMCTVgxDjAMBgNVBBETBTAxMDMwMSUwIwYDVQQJExxJbnN1cmdlbnRlcyBT
+dXIgMTk0MCwgUGlzbyAxMUIwQAYDVQQMEzlEaXJlY3RvciBkZSBDb29yZGluYWNpb24gZGVsIFJl
+Z2lzdHJvIFB1YmxpY28gZGUgQ29tZXJjaW8xLDAqBgNVBAMTI1JVRy4gRXJuZXN0byBkZWwgQ2Fz
+dGlsbG8gSGVybmFuZGV6MTQwMgYDVQQLEytEaXJlY2Npb24gR2VuZXJhbCBkZSBOb3JtYXRpdmlk
+YWQgTWVyY2FudGlsMR8wHQYDVQQKExZTZWNyZXRhcmlhIGRlIEVjb25vbWlhMSswKQYJKoZIhvcN
+AQkBFhxjb250YWN0b19ydWdAZWNvbm9taWEuZ29iLm14MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A
+MIIBCgKCAQEA+Wmh6iPVl8NALOCTkm1Mu6XXCEAQCdAII0GT6o8YNW5iEcdE9L6NoA/SRY2vQl6I
+XqIIRwemuKuVXQ1YW/sbyAOoXZMxWtzmxCxnCH8Val5x8kL7ozwCdWXdg/xfTcp1KN/zsdUilHeF
+hscMB59rqWrEZitleu4X9/Pv6E1wmBGXqMm0NkWd3U5YoZiRfXA7bzbdIUlt/7FZ5eZB5bUaVN/b
+GJ98xzkir1ykTxW3Rq6BLJFeGurqTZE/+DDQqrXwAPsQ8LgOHhHID64ry4pL8Ht5wviZUaQBiUKj
+a4i7uTfWWbehEWNLPu/tnp3Y44MBGhbDfktAbgDwhIVd3FSMOQIDAQABo4GWMIGTMB8GA1UdIwQY
+MBaAFO/gXAjW4aeOvx1wXqBtUpN7eOFeMB0GA1UdDgQWBBQ+1G9bhYxrgT3S5GSt6s6Cpf4GQzAd
+BgNVHSUEFjAUBggrBgEFBQcDBAYIKwYBBQUHAwIwDwYDVR0TAQH/BAUwAwIBADAOBgNVHQ8BAf8E
+BAMCA+gwEQYJYIZIAYb4QgEBBAQDAgWgMA0GCSqGSIb3DQEBCwUAA4ICAQCqa4zlV/dbsP0XLIkh
+OVhKGBoVH5u/h+NOEyqf8X3uvOjhIMyjM+kOYgwZSyhGdEtbOhYNy2+ztGsNpesNnevtEaiVZ9c9
+YahAjI2ldr2u6xlH3exQXXHK29a4UCAvW2/ThLoEUhDsWh3zDmHi+i6fWj5+8rdfTMyqLGFQctfl
+j3yzP8IASlFFmoTb16sRVu3TiEINoK5II2Rb6o2KQkuvuH9EczbHfXeXFngPQXlxnqavY41Ch6C+
+MU1Y8loOE/4euw85qi5Z9ErLQcWYVlHNlXL3G7isKbHxFHR7hWs5sLwwGZTgEnEwweuo8iopuPeF
+eBoiitDmbITmbQhVEPwDziYg8cHTYHpNJ03mn+bKm7U8oTVrgVQdt9iXQOFqo5iz6W53uJtlcouM
+dLjPJcpdu6puHZMWNEP6fgJ/TGrvt3r7u69idWWDSGRuVvVyOdUp95tDIDdSK6K7rrc94QL4Onbv
+Ydn1kstWuAPhIaMS6CZx60K1C8e/DVtclqOplEVD298fqBhIjxPJOWQuQIyQLJi4VnhchbibOaOk
+e3E5IEqN1JtHNpoTfehTdB3pdJtkkJPvfFTqlLeJf2CW804B0EIpRZqu+7boKp+WE5Ri+6pmLJmF
+aBHWtwZP0gvAKrMCsK0XD1mW8ZCqSVX4GNTJa8jU3U/m9cX5lxqD0bWm6Q==</selloSE>
+		<estampaDeTiempoSE>MIIPTTADAgEAMIIPRAYJKoZIhvcNAQcCoIIPNTCCDzECAQMxDzANBglghkgBZQMEAgEFADCCATwG
+CyqGSIb3DQEJEAEEoIIBKwSCAScwggEjAgEBBgpgg2RlCoI8KAEBMDEwDQYJYIZIAWUDBAIBBQAE
+IIbttK21d7MEr8+/kB7PnlcUb82ZTRNV3XSVMOrAT36dAgZjOffpKf4YEzIwMjMwMzExMDA0NDA1
+LjA3N1owBIACAfQCCQCZIFH9zf1SpaCBsKSBrTCBqjEXMBUGA1UEBxMOQWx2YXJvIE9icmVnb24x
+GTAXBgNVBAgTEENpdWRhZCBkZSBNZXhpY28xCzAJBgNVBAYTAk1YMR0wGwYDVQQDExRUU0ExLmVj
+b25vbWlhLmdvYi5teDEnMCUGA1UECxMebkNpcGhlciBEU0UgRVNOOjQ4RDctMkRGQy1CRjdCMR8w
+HQYDVQQKExZTZWNyZXRhcmlhIGRlIEVjb25vbWlhoIIJZDCCBegwggPQoAMCAQICAQYwDQYJKoZI
+hvcNAQELBQAwggFFMRcwFQYDVQQHEw5BbHZhcm8gT2JyZWdvbjEZMBcGA1UECBMQQ2l1ZGFkIGRl
+IE1leGljbzELMAkGA1UEBhMCTVgxDjAMBgNVBBETBTAxMDMwMSswKQYDVQQJEyJJbnN1cmdlbnRl
+cyBTdXIgMTk0MCwgQ29sLiBGbG9yaWRhMUcwRQYDVQQDEz5BdXRvcmlkYWQgQ2VydGlmaWNhZG9y
+YSBSYWl6IFNlZ3VuZGEgZGUgU2VjcmV0YXJpYSBkZSBFY29ub21pYTE0MDIGA1UECxMrRGlyZWNj
+aW9uIEdlbmVyYWwgZGUgTm9ybWF0aXZpZGFkIE1lcmNhbnRpbDEfMB0GA1UEChMWU2VjcmV0YXJp
+YSBkZSBFY29ub21pYTElMCMGCSqGSIb3DQEJARYWYWNyMnNlQGVjb25vbWlhLmdvYi5teDAeFw0x
+NzAyMjMwMDAwMDBaFw0yOTAyMjMwMDAwMDBaMIGqMRcwFQYDVQQHEw5BbHZhcm8gT2JyZWdvbjEZ
+MBcGA1UECBMQQ2l1ZGFkIGRlIE1leGljbzELMAkGA1UEBhMCTVgxHTAbBgNVBAMTFFRTQTEuZWNv
+bm9taWEuZ29iLm14MScwJQYDVQQLEx5uQ2lwaGVyIERTRSBFU046NDhENy0yREZDLUJGN0IxHzAd
+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
+edQOo4TEKnhzAASy4mIjqkGf+UsdnksPffZlWz9vUaYYDlM2k+gAaugNvBIxggRxMIIEbQIBATCC
+AUwwggFFMRcwFQYDVQQHEw5BbHZhcm8gT2JyZWdvbjEZMBcGA1UECBMQQ2l1ZGFkIGRlIE1leGlj
+bzELMAkGA1UEBhMCTVgxDjAMBgNVBBETBTAxMDMwMSswKQYDVQQJEyJJbnN1cmdlbnRlcyBTdXIg
+MTk0MCwgQ29sLiBGbG9yaWRhMUcwRQYDVQQDEz5BdXRvcmlkYWQgQ2VydGlmaWNhZG9yYSBSYWl6
+IFNlZ3VuZGEgZGUgU2VjcmV0YXJpYSBkZSBFY29ub21pYTE0MDIGA1UECxMrRGlyZWNjaW9uIEdl
+bmVyYWwgZGUgTm9ybWF0aXZpZGFkIE1lcmNhbnRpbDEfMB0GA1UEChMWU2VjcmV0YXJpYSBkZSBF
+Y29ub21pYTElMCMGCSqGSIb3DQEJARYWYWNyMnNlQGVjb25vbWlhLmdvYi5teAIBBjANBglghkgB
+ZQMEAgEFAKCCAfQwGgYJKoZIhvcNAQkDMQ0GCyqGSIb3DQEJEAEEMC8GCSqGSIb3DQEJBDEiBCD2
+fDVUwks7Sa5UPHRJ4lk0Z9OiLQEUtSOrZcHYnq/ywjCCAaMGCyqGSIb3DQEJEAIMMYIBkjCCAY4w
+ggGKMIIBbgQUE5Ze369wMHFHjXWAZDyT3oPXbMMwggFUMIIBTaSCAUkwggFFMRcwFQYDVQQHEw5B
+bHZhcm8gT2JyZWdvbjEZMBcGA1UECBMQQ2l1ZGFkIGRlIE1leGljbzELMAkGA1UEBhMCTVgxDjAM
+BgNVBBETBTAxMDMwMSswKQYDVQQJEyJJbnN1cmdlbnRlcyBTdXIgMTk0MCwgQ29sLiBGbG9yaWRh
+MUcwRQYDVQQDEz5BdXRvcmlkYWQgQ2VydGlmaWNhZG9yYSBSYWl6IFNlZ3VuZGEgZGUgU2VjcmV0
+YXJpYSBkZSBFY29ub21pYTE0MDIGA1UECxMrRGlyZWNjaW9uIEdlbmVyYWwgZGUgTm9ybWF0aXZp
+ZGFkIE1lcmNhbnRpbDEfMB0GA1UEChMWU2VjcmV0YXJpYSBkZSBFY29ub21pYTElMCMGCSqGSIb3
+DQEJARYWYWNyMnNlQGVjb25vbWlhLmdvYi5teAIBBjAWBBSnaftJ5EwfMg7Ke+3GmufVqwnTMTAN
+BgkqhkiG9w0BAQsFAASCAQCk1A4K+LlS94BrN2h55U1+QR5MO3EgXrZs1KNscVX3U0u18eOrb48S
+5FIKzU7/P3txrgqZR8Aw54aJOTuZShaRCHiY7vblgGWQpmw5+jbVFii4e+I722KQ94XUiEpP5Pi3
+PAsfelpOgziLPowx4XiUQjOOEIfAz4lOUFUvh9C2h+BbTF9N8doG+krprorI5iNG2mxkMFt47ZM6
+qrGjST2xAYkZdDEafhoaNJKb7y8MzJvN9PKM4/ioYYmIguv4YhGRJ0m/K0duqkFHaPMWlsu47pPW
+W1+XO0ANxaZCVtLQyjCJTjWmCa2wZq96oqA6nKx1P6TjdkCqHCm87Q2Aek7t</estampaDeTiempoSE>
+	</Signature>
+</contratoSocial>

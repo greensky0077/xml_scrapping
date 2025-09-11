@@ -1,0 +1,26 @@
+{
+  "name": "xml-data-replacer",
+  "version": "1.0.0",
+  "description": "Node.js script to replace specific data in SAS XML files",
+  "main": "replace-xml-data.js",
+  "scripts": {
+    "transform": "node scripts/transform.mjs",
+    "start": "npm run transform",
+    "build": "npm run transform"
+  },
+  "keywords": [
+    "xml",
+    "sas",
+    "data-replacement",
+    "nodejs"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "fast-xml-parser": "^5.2.5",
+    "qrcode": "^1.5.4"
+  }
+}
