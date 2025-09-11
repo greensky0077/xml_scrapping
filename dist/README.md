@@ -41,4 +41,4 @@ The QR code points to: `https://alt-site.example.com/contrato/585748`
 
 To change the target URL, edit the QR code URL in index.html.
 
-Generated: 2025-09-10T19:55:02.809Z
+Generated: 2025-09-11T16:38:23.840Z

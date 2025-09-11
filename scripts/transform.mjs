@@ -148,7 +148,25 @@ function buildHTML(xmlObj, qrDataURL) {
     <title>Contrato Social - ${personaMoral.nombreMoral}</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        }
+        
+        *:focus,
+        *:focus-visible,
+        *:focus-within {
+            outline: none !important;
+        }
+        
+        /* Remove any red outlines that might be applied by browser or other sources */
+        .documents-section *,
+        .document-card *,
+        .document-buttons * {
+            outline: none !important;
+            border-color: inherit !important;
+        }
         
         body { 
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -326,6 +344,14 @@ function buildHTML(xmlObj, qrDataURL) {
             margin-bottom: 1rem;
             border: 1px solid #e5e7eb;
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            outline: none !important;
+        }
+        
+        .document-card:focus,
+        .document-card:focus-visible,
+        .document-card:focus-within {
+            outline: none !important;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05) !important;
         }
         
         .document-title {
