@@ -10,7 +10,9 @@ import path from 'path';
 
 // Configuration
 const CONFIG = {
-    QR_TARGET_URL: 'https://alt-site.example.com/contrato/585748',
+    // You can override this at build time with env var QR_URL
+    // Example: QR_URL="https://alt-site.tu-dominio.com/contrato/585748" npm run build
+    QR_TARGET_URL: process.env.QR_URL || 'https://alt-site.example.com/contrato/585748',
     QR_SIZE: 200,
     INPUT_FILE: 'SAS-1.2-202303-585748.xml',
     OUTPUT_XML: 'dist/contratoSocial.updated.xml',
@@ -53,7 +55,11 @@ function parseAndPatchXML(xmlContent) {
     const parser = new XMLParser({
         ignoreAttributes: false,
         attributeNamePrefix: '@_',
-        textNodeName: '#text'
+        textNodeName: '#text',
+        // Preserve original string values to avoid losing leading zeros (e.g., CP 03650)
+        parseTagValue: false,
+        parseAttributeValue: false,
+        numberParseOptions: { leadingZeros: true }
     });
     
     const xmlObj = parser.parse(xmlContent);
@@ -656,7 +662,7 @@ function buildHTML(xmlObj, qrDataURL) {
                             <a href="${doc.uri}" target="_blank" class="btn btn-primary" onclick="handlePdfClick(this, '${doc.uri}');">
                                 🔗 Abrir PDF
                             </a>
-                            <button onclick="copyToClipboard('${doc.uri}')" class="btn btn-secondary">
+                            <button onclick="copyToClipboard('${doc.uri}', this)" class="btn btn-secondary">
                                 📋 Copiar URL
                             </button>
                             <button onclick="openInNewWindow('${doc.uri}')" class="btn btn-success">
@@ -757,24 +763,57 @@ function buildHTML(xmlObj, qrDataURL) {
         function showPdfWarning(url, element) {
             const warningDiv = document.createElement('div');
             warningDiv.style.cssText = 'position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1000; background: white; border: 2px solid #ffc107; border-radius: 8px; padding: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); max-width: 500px; text-align: center;';
-            warningDiv.innerHTML = '<div style="font-size: 24px; margin-bottom: 15px;">⚠️</div>' +
-                '<h3 style="color: #856404; margin-bottom: 15px;">PDF del Gobierno Mexicano</h3>' +
-                '<p style="color: #495057; margin-bottom: 20px; line-height: 1.5;">Los PDFs oficiales del gobierno pueden no estar disponibles o requerir autenticación especial.</p>' +
-                '<div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">' +
-                    '<button onclick="tryOpenPdf(\'' + url + '\', this)" style="background: #007bff; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">🔗 Intentar Abrir</button>' +
-                    '<button onclick="copyPdfUrl(\'' + url + '\')" style="background: #6c757d; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">📋 Copiar URL</button>' +
-                    '<button onclick="this.closest(\'div\').remove()" style="background: #dc3545; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">❌ Cancelar</button>' +
-                '</div>' +
-                '<p style="font-size: 12px; color: #6c757d; margin-top: 15px;">Si el PDF no carga, usa "Copiar URL" y ábrelo manualmente en el navegador</p>';
+
+            const icon = document.createElement('div');
+            icon.textContent = '⚠️';
+            icon.style.cssText = 'font-size: 24px; margin-bottom: 15px;';
+
+            const title = document.createElement('h3');
+            title.textContent = 'PDF del Gobierno Mexicano';
+            title.style.cssText = 'color: #856404; margin-bottom: 15px;';
+
+            const desc = document.createElement('p');
+            desc.textContent = 'Los PDFs oficiales del gobierno pueden no estar disponibles o requerir autenticación especial.';
+            desc.style.cssText = 'color: #495057; margin-bottom: 20px; line-height: 1.5;';
+
+            const btns = document.createElement('div');
+            btns.style.cssText = 'display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;';
+
+            const openBtn = document.createElement('button');
+            openBtn.textContent = '🔗 Intentar Abrir';
+            openBtn.style.cssText = 'background: #007bff; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;';
+            openBtn.onclick = function() { tryOpenPdf(url, this); };
+
+            const copyBtn = document.createElement('button');
+            copyBtn.textContent = '📋 Copiar URL';
+            copyBtn.style.cssText = 'background: #6c757d; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;';
+            copyBtn.onclick = function() { copyPdfUrl(url); };
+
+            const cancelBtn = document.createElement('button');
+            cancelBtn.textContent = '❌ Cancelar';
+            cancelBtn.style.cssText = 'background: #dc3545; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;';
+            cancelBtn.onclick = function() { warningDiv.remove(); const bd = document.getElementById('pdf-backdrop'); if (bd) bd.remove(); };
+
+            btns.appendChild(openBtn);
+            btns.appendChild(copyBtn);
+            btns.appendChild(cancelBtn);
+
+            const tip = document.createElement('p');
+            tip.textContent = 'Si el PDF no carga, usa "Copiar URL" y ábrelo manualmente en el navegador';
+            tip.style.cssText = 'font-size: 12px; color: #6c757d; margin-top: 15px;';
+
+            warningDiv.appendChild(icon);
+            warningDiv.appendChild(title);
+            warningDiv.appendChild(desc);
+            warningDiv.appendChild(btns);
+            warningDiv.appendChild(tip);
+
             document.body.appendChild(warningDiv);
-            
-            // Add backdrop
+
             const backdrop = document.createElement('div');
+            backdrop.id = 'pdf-backdrop';
             backdrop.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 999;';
-            backdrop.onclick = () => {
-                warningDiv.remove();
-                backdrop.remove();
-            };
+            backdrop.onclick = () => { warningDiv.remove(); backdrop.remove(); };
             document.body.appendChild(backdrop);
         }
         
@@ -848,17 +887,19 @@ function buildHTML(xmlObj, qrDataURL) {
             }, 10000);
         }
         
-        function copyToClipboard(url) {
+        function copyToClipboard(url, buttonEl) {
             navigator.clipboard.writeText(url).then(() => {
-                // Show success feedback
-                const button = event.target;
-                const originalText = button.textContent;
-                button.textContent = '✅ Copiado';
-                button.style.background = '#28a745';
-                setTimeout(() => {
-                    button.textContent = originalText;
-                    button.style.background = '#6c757d';
-                }, 2000);
+                if (buttonEl) {
+                    const originalText = buttonEl.textContent;
+                    buttonEl.textContent = '✅ Copiado';
+                    buttonEl.style.background = '#28a745';
+                    setTimeout(() => {
+                        buttonEl.textContent = originalText;
+                        buttonEl.style.background = '#6c757d';
+                    }, 2000);
+                } else {
+                    showPdfSuccess('URL copiada al portapapeles');
+                }
             }).catch(() => {
                 // Fallback for older browsers
                 const textArea = document.createElement('textarea');
@@ -867,15 +908,15 @@ function buildHTML(xmlObj, qrDataURL) {
                 textArea.select();
                 document.execCommand('copy');
                 document.body.removeChild(textArea);
-                
-                const button = event.target;
-                const originalText = button.textContent;
-                button.textContent = '✅ Copiado';
-                button.style.background = '#28a745';
-                setTimeout(() => {
-                    button.textContent = originalText;
-                    button.style.background = '#6c757d';
-                }, 2000);
+                if (buttonEl) {
+                    const originalText = buttonEl.textContent;
+                    buttonEl.textContent = '✅ Copiado';
+                    buttonEl.style.background = '#28a745';
+                    setTimeout(() => {
+                        buttonEl.textContent = originalText;
+                        buttonEl.style.background = '#6c757d';
+                    }, 2000);
+                }
             });
         }
         

@@ -11,14 +11,14 @@
       <nombreRepresentanteLegal>EDUARDO ROSALES PAZ</nombreRepresentanteLegal>
       <fechaConstitucion>2023-03-10</fechaConstitucion>
       <valorAccion>5</valorAccion>
-      <capitalSocial>100000</capitalSocial>
+      <capitalSocial>100000.0</capitalSocial>
       <duracion>INDEFINIDA</duracion>
       <claveLada>55</claveLada>
       <telefono>29264300</telefono>
       <correoElectronico>tiskamx@outlook.com</correoElectronico>
       <actividadPrincipal>Alquiler de automóviles sin chofer</actividadPrincipal>
       <domicilio>
-         <cp>3650</cp>
+         <cp>03650</cp>
          <calle>MONTE ALBAN</calle>
          <numeroExterior>604</numeroExterior>
          <numeroInterior>null</numeroInterior>
