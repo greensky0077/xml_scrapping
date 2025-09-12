@@ -10,10 +10,10 @@ import path from 'path';
 
 // Configuration
 const CONFIG = {
-    // QR points to the original PDF from the XML file
+    // QR points to the HTML page (your formatted display)
     // You can override this at build time with env var QR_URL
     // Example: QR_URL="https://alt-site.tu-dominio.com/contrato/585748" npm run build
-    QR_TARGET_URL: process.env.QR_URL || 'https://edocumentos.economia.gob.mx/dgnm/protected/sas/1.2/202303/SAS-1.2-202303-585748.pdf',
+    QR_TARGET_URL: process.env.QR_URL || 'https://alt-site.example.com/contrato/585748',
     QR_SIZE: 200,
     INPUT_FILE: 'SAS-1.2-202303-585748.xml',
     OUTPUT_XML: 'dist/contratoSocial.updated.xml',
@@ -656,25 +656,38 @@ function buildHTML(xmlObj, qrDataURL) {
             <h2>📄 Documentos</h2>
             <div class="documents-section">
                 <p style="margin-bottom: 1.5rem; color: #92400e; font-weight: 600; font-size: 1.1rem;">Documentos oficiales disponibles</p>
-                ${data.documentos ? data.documentos.documento.map(doc => `
-                    <div class="document-card">
-                        <div class="document-title">📄 ${doc.descripcion}</div>
-                        <div class="document-buttons">
-                            <a href="${doc.uri}" target="_blank" class="btn btn-primary" onclick="handlePdfClick(this, '${doc.uri}');">
-                                🔗 Abrir PDF
-                            </a>
-                            <button onclick="copyToClipboard('${doc.uri}', this)" class="btn btn-secondary">
-                                📋 Copiar URL
-                            </button>
-                            <button onclick="openInNewWindow('${doc.uri}')" class="btn btn-success">
-                                🪟 Nueva Ventana
-                            </button>
-                        </div>
-                        <div class="document-url">
-                            <strong>URL:</strong> ${doc.uri}
-                        </div>
+                <div class="document-card">
+                    <div class="document-title">📄 XML Actualizado (con datos de Eduardo)</div>
+                    <div class="document-buttons">
+                        <a href="contratoSocial.updated.xml" target="_blank" class="btn btn-primary">
+                            🔗 Ver XML Actualizado
+                        </a>
+                        <button onclick="copyToClipboard(window.location.origin + '/contratoSocial.updated.xml', this)" class="btn btn-secondary">
+                            📋 Copiar URL
+                        </button>
+                        <button onclick="openInNewWindow('contratoSocial.updated.xml')" class="btn btn-success">
+                            🪟 Nueva Ventana
+                        </button>
                     </div>
-                `).join('') : '<p style="color: #6b7280; text-align: center; padding: 2rem;">No hay documentos disponibles</p>'}
+                    <div class="document-url">
+                        <strong>Archivo:</strong> contratoSocial.updated.xml (con datos de EDUARDO ROSALES PAZ)
+                    </div>
+                </div>
+                
+                <div class="document-card">
+                    <div class="document-title">📄 PDFs Oficiales del Gobierno (referencia)</div>
+                    <div class="document-buttons">
+                        <a href="https://edocumentos.economia.gob.mx/dgnm/protected/sas/1.2/202303/SAS-1.2-202303-585748.pdf" target="_blank" class="btn btn-primary" onclick="handlePdfClick(this, 'https://edocumentos.economia.gob.mx/dgnm/protected/sas/1.2/202303/SAS-1.2-202303-585748.pdf');">
+                            🔗 PDF Original
+                        </a>
+                        <a href="https://edocumentos.economia.gob.mx/dgnm/protected/sas/1.2/202303/SAS-1.2-202303-585748-SIGNED.pdf" target="_blank" class="btn btn-primary" onclick="handlePdfClick(this, 'https://edocumentos.economia.gob.mx/dgnm/protected/sas/1.2/202303/SAS-1.2-202303-585748-SIGNED.pdf');">
+                            🔗 PDF Firmado
+                        </a>
+                    </div>
+                    <div class="document-url">
+                        <strong>Nota:</strong> PDFs oficiales del gobierno (solo referencia)
+                    </div>
+                </div>
                 
                 <div class="tips-section">
                     <div class="tips-title">💡 Consejos para abrir PDFs</div>
