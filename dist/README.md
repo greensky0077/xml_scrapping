@@ -37,8 +37,8 @@
 
 ## QR Code
 
-The QR code points to: `https://alt-site.example.com/contrato/585748`
+The QR code points to: `https://edocumentos.economia.gob.mx/dgnm/protected/sas/1.2/202303/SAS-1.2-202303-585748.pdf`
 
 To change the target URL, edit the QR code URL in index.html.
 
-Generated: 2025-09-12T10:13:27.016Z
+Generated: 2025-09-12T15:56:41.935Z

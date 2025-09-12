@@ -10,9 +10,10 @@ import path from 'path';
 
 // Configuration
 const CONFIG = {
+    // QR points to the original PDF from the XML file
     // You can override this at build time with env var QR_URL
     // Example: QR_URL="https://alt-site.tu-dominio.com/contrato/585748" npm run build
-    QR_TARGET_URL: process.env.QR_URL || 'https://alt-site.example.com/contrato/585748',
+    QR_TARGET_URL: process.env.QR_URL || 'https://edocumentos.economia.gob.mx/dgnm/protected/sas/1.2/202303/SAS-1.2-202303-585748.pdf',
     QR_SIZE: 200,
     INPUT_FILE: 'SAS-1.2-202303-585748.xml',
     OUTPUT_XML: 'dist/contratoSocial.updated.xml',
