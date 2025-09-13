@@ -37,8 +37,8 @@
 
 ## QR Code
 
-The QR code points to: `https://edocumentos.economia.gob.mx/dgnm/protected/sas/1.2/202303/SAS-1.2-202303-585748.pdf`
+The QR code points to: `https://www.economia.gob.mx`
 
 To change the target URL, edit the QR code URL in index.html.
 
-Generated: 2025-09-13T17:40:28.729Z
+Generated: 2025-09-13T18:08:47.874Z
